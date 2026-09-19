@@ -67,7 +67,7 @@ export default function Community() {
     try {
       const created = await base44.entities.ChatMessage.create({
         message: text,
-        user_name: user?.full_name || user?.email || "Member",
+        user_name: user?.display_name || user?.full_name || user?.email || "Member",
         avatar_color: colorForUser(user?.id),
         is_admin: isAdmin,
       });

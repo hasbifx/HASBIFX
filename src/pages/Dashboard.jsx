@@ -51,7 +51,7 @@ export default function Dashboard() {
   }).length;
   const quizzesDone = quizResults.length;
 
-  const firstName = (user?.full_name || user?.email || "Member").split("@")[0].split(" ")[0];
+  const firstName = (user?.display_name || user?.full_name || user?.email || "Member").split("@")[0].split(" ")[0];
 
   return (
     <div className="p-4 sm:p-6 lg:p-10 max-w-6xl mx-auto">

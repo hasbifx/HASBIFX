@@ -91,6 +91,10 @@ export function colorForUser(id) {
   return COLORS[Math.abs(hash) % COLORS.length];
 }
 
+export function displayName(user) {
+  return user?.display_name || user?.full_name || user?.email || "Member";
+}
+
 export function initials(name) {
   if (!name) return "?";
   const parts = name.trim().split(/\s+/);

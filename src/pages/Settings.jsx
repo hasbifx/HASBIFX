@@ -1,27 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "@/lib/AuthContext";
 import { base44 } from "@/api/base44Client";
+import { displayName } from "@/lib/learning";
+import { toast } from "@/components/ui/use-toast";
 import { Mail, Calendar, Shield, Bell, Palette, Info, Edit3, Check, X, ShieldCheck } from "lucide-react";
 
 export default function Settings() {
-  const { user, logout } = useAuth();
+  const { user, logout, refreshUser } = useAuth();
   const [name, setName] = useState("");
   const [editing, setEditing] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
   const [notif, setNotif] = useState(true);
 
-  useEffect(() => { setName(user?.full_name || ""); }, [user]);
+  useEffect(() => { setName(user?.display_name || user?.full_name || ""); }, [user]);
 
   const joinDate = user?.created_date ? new Date(user.created_date).toLocaleDateString("id-ID", { year: "numeric", month: "long", day: "numeric" }) : "-";
 
   const saveName = async () => {
+    const trimmed = name.trim();
+    if (trimmed.length < 2 || trimmed.length > 50) {
+      setError("Tolong masukkan nama pengguna yang valid.");
+      return;
+    }
     setSaving(true);
+    setError("");
     try {
-      await base44.auth.updateMe({ full_name: name });
+      await base44.auth.updateMe({ display_name: trimmed });
+      await refreshUser();
       setEditing(false);
-      window.location.reload();
+      toast({ title: "Nama pengguna berhasil diperbarui." });
     } catch (e) {
-      setEditing(false);
+      setError("Gagal menyimpan perubahan. Silakan coba lagi.");
     } finally {
       setSaving(false);
     }
@@ -41,23 +51,26 @@ export default function Settings() {
           <div>
             <label className="text-xs text-muted-foreground">Nama</label>
             {editing ? (
-              <div className="flex items-center gap-2 mt-1">
-                <input
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="flex-1 bg-background/50 border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary/50"
-                  autoFocus
-                />
-                <button onClick={saveName} disabled={saving} className="p-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90">
-                  {saving ? <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" /> : <Check className="w-4 h-4" />}
-                </button>
-                <button onClick={() => { setEditing(false); setName(user?.full_name || ""); }} className="p-2 rounded-lg border border-border hover:bg-secondary">
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
+              <>
+                <div className="flex items-center gap-2 mt-1">
+                  <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="flex-1 bg-background/50 border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary/50"
+                    autoFocus
+                  />
+                  <button onClick={saveName} disabled={saving} className="p-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90">
+                    {saving ? <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" /> : <Check className="w-4 h-4" />}
+                  </button>
+                  <button onClick={() => { setEditing(false); setName(user?.display_name || user?.full_name || ""); setError(""); }} className="p-2 rounded-lg border border-border hover:bg-secondary">
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+                {error && <p className="text-xs text-destructive mt-1.5">{error}</p>}
+              </>
             ) : (
               <div className="flex items-center justify-between mt-1">
-                <p className="text-sm font-medium">{user?.full_name || "Belum diatur"}</p>
+                <p className="text-sm font-medium">{displayName(user)}</p>
                 <button onClick={() => setEditing(true)} className="text-muted-foreground hover:text-primary"><Edit3 className="w-4 h-4" /></button>
               </div>
             )}

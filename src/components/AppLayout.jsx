@@ -104,10 +104,10 @@ function NavList({ onNavigate }) {
             className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold text-white shrink-0"
             style={{ backgroundColor: colorForUser(user?.id) }}
           >
-            {initials(user?.full_name || user?.email)}
+            {initials(user?.display_name || user?.full_name || user?.email)}
           </div>
           <div className="min-w-0 flex-1">
-            <p className="text-sm font-medium truncate">{user?.full_name || "Member"}</p>
+            <p className="text-sm font-medium truncate">{user?.display_name || user?.full_name || "Member"}</p>
             <p className="text-xs text-muted-foreground truncate">{user?.email}</p>
           </div>
         </Link>

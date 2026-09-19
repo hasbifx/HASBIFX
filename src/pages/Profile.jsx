@@ -2,20 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "@/lib/AuthContext";
 import { base44 } from "@/api/base44Client";
 import { Link } from "react-router-dom";
-import { loadCurriculum, loadUserProgress, computeOverallProgress, findLastLesson, colorForUser, initials } from "@/lib/learning";
+import { loadCurriculum, loadUserProgress, computeOverallProgress, findLastLesson, colorForUser, initials, displayName } from "@/lib/learning";
+import { toast } from "@/components/ui/use-toast";
 import {
   Mail, Calendar, BookOpen, Trophy, Award, TrendingUp, Edit3, Check, X, Shield, Star,
 } from "lucide-react";
 
 export default function Profile() {
-  const { user } = useAuth();
+  const { user, refreshUser } = useAuth();
   const [data, setData] = useState(null);
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState("");
   const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    setName(user?.full_name || "");
+    setName(user?.display_name || user?.full_name || "");
   }, [user]);
 
   useEffect(() => {
@@ -51,13 +53,20 @@ export default function Profile() {
   if (user?.role === "admin") badges.push({ icon: Shield, label: "Admin", desc: "Akses admin" });
 
   const saveName = async () => {
+    const trimmed = name.trim();
+    if (trimmed.length < 2 || trimmed.length > 50) {
+      setError("Tolong masukkan nama pengguna yang valid.");
+      return;
+    }
     setSaving(true);
+    setError("");
     try {
-      await base44.auth.updateMe({ full_name: name });
+      await base44.auth.updateMe({ display_name: trimmed });
+      await refreshUser();
       setEditing(false);
-      window.location.reload();
+      toast({ title: "Nama pengguna berhasil diperbarui." });
     } catch (e) {
-      setEditing(false);
+      setError("Gagal menyimpan perubahan. Silakan coba lagi.");
     } finally {
       setSaving(false);
     }
@@ -77,23 +86,26 @@ export default function Profile() {
           </div>
           <div className="flex-1 text-center sm:text-left min-w-0">
             {editing ? (
-              <div className="flex items-center gap-2 justify-center sm:justify-start">
-                <input
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="bg-background/50 border border-border rounded-lg px-3 py-1.5 text-lg font-bold focus:outline-none focus:border-primary/50"
-                  autoFocus
-                />
-                <button onClick={saveName} disabled={saving} className="p-1.5 rounded-lg bg-primary text-primary-foreground hover:opacity-90">
-                  {saving ? <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" /> : <Check className="w-4 h-4" />}
-                </button>
-                <button onClick={() => { setEditing(false); setName(user?.full_name || ""); }} className="p-1.5 rounded-lg border border-border hover:bg-secondary">
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
+              <>
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="bg-background/50 border border-border rounded-lg px-3 py-1.5 text-lg font-bold focus:outline-none focus:border-primary/50"
+                    autoFocus
+                  />
+                  <button onClick={saveName} disabled={saving} className="p-1.5 rounded-lg bg-primary text-primary-foreground hover:opacity-90">
+                    {saving ? <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" /> : <Check className="w-4 h-4" />}
+                  </button>
+                  <button onClick={() => { setEditing(false); setName(user?.display_name || user?.full_name || ""); setError(""); }} className="p-1.5 rounded-lg border border-border hover:bg-secondary">
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+                {error && <p className="text-xs text-destructive mt-1.5 text-center sm:text-left">{error}</p>}
+              </>
             ) : (
               <div className="flex items-center gap-2 justify-center sm:justify-start">
-                <h1 className="text-xl sm:text-2xl font-bold">{user?.full_name || "Member"}</h1>
+                <h1 className="text-xl sm:text-2xl font-bold">{displayName(user)}</h1>
                 <button onClick={() => setEditing(true)} className="p-1 text-muted-foreground hover:text-primary">
                   <Edit3 className="w-4 h-4" />
                 </button>

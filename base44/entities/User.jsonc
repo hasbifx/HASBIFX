@@ -7,6 +7,10 @@
         "admin",
         "user"
       ]
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Custom display name chosen by the user (overrides full_name in the UI)"
     }
   },
   "required": [
