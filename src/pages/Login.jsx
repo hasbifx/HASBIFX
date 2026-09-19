@@ -39,16 +39,16 @@ export default function Login() {
   return (
     <AuthLayout
       icon={LogIn}
-      title="Welcome back"
-      subtitle="Log in to your account"
+      title="Selamat datang kembali"
+      subtitle="Masuk ke akun Anda"
       footer={
         <>
-          Don't have an account?{" "}
+          Belum punya akun?{" "}
           <Link
             to={"/register" + (returnTo !== "/" ? "?returnTo=" + encodeURIComponent(returnTo) : "")}
             className="text-primary font-medium hover:underline"
           >
-            Create one
+            Daftar sekarang
           </Link>
         </>
       }
@@ -59,7 +59,7 @@ export default function Login() {
         onClick={handleGoogle}
       >
         <GoogleIcon className="w-5 h-5 mr-2" />
-        Continue with Google
+        Lanjutkan dengan Google
       </Button>
 
       <div className="relative mb-6">
@@ -67,7 +67,7 @@ export default function Login() {
           <div className="w-full border-t border-border" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-card px-3 text-muted-foreground">or</span>
+          <span className="bg-card px-3 text-muted-foreground">atau</span>
         </div>
       </div>
 
@@ -99,7 +99,7 @@ export default function Login() {
           <div className="flex items-center justify-between">
             <Label htmlFor="password">Password</Label>
             <Link to="/forgot-password" className="text-xs text-primary hover:underline">
-              Forgot password?
+              Lupa password?
             </Link>
           </div>
           <div className="relative">
@@ -120,10 +120,10 @@ export default function Login() {
           {loading ? (
             <>
               <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Logging in...
+              Memproses...
             </>
           ) : (
-            "Log in"
+            "Masuk"
           )}
         </Button>
       </form>

@@ -1,0 +1,192 @@
+[
+  {
+    "title": "Trading Bagi Pemula",
+    "description": "Fondasi trading: memahami apa itu trading, jenis market, dan risiko dasar.",
+    "level": "Pemula", "order": 1, "icon": "Sparkles",
+    "lessons": [
+      ["Apa Itu Trading?", "Trading adalah aktivitas membeli dan menjual aset keuangan (seperti mata uang, saham, atau crypto) dengan tujuan memperoleh profit dari perubahan harga. Trading berbeda dengan investasi karena fokus pada pergerakan harga jangka pendek dan menengah. Seorang trader menganalisis pasar, mengambil posisi, dan mengelola risiko setiap transaksi.", ["Trading = beli & jual aset untuk profit", "Berbeda dengan investasi jangka panjang", "Butuh analisis dan manajemen risiko"]],
+      ["Perbedaan Trading dan Investasi", "Investasi fokus pada pertumbuhan nilai aset dalam jangka panjang (tahunan), sementara trading fokus pada pergerakan harga dalam jangka pendek (menit, jam, hari, minggu). Investor membeli dan menahan aset, trader aktif masuk dan keluar pasar. Trading membutuhkan waktu dan perhatian lebih, investasi lebih pasif.", ["Investasi = jangka panjang, pasif", "Trading = jangka pendek, aktif", "Trading butuh monitoring rutin"]],
+      ["Apa Itu Trader?", "Trader adalah orang yang melakukan trading di pasar keuangan. Trader bisa profesional yang bekerja di institusi atau retail yang trading dengan modal sendiri. Trader menggunakan analisis teknikal, fundamental, dan manajemen risiko untuk mengambil keputusan. Trader yang sukses disiplin, sabar, dan punya sistem.", ["Trader = pelaku trading", "Bisa institusional atau retail", "Butuh sistem dan disiplin"]],
+      ["Jenis-Jenis Market", "Ada beberapa market utama: Forex (valuta asing), Crypto (mata uang digital), Saham (equity), dan Komoditas (gold, oil). Setiap market punya karakteristik, jam operasional, dan volatilitas berbeda. Pemula disarankan fokus satu market dulu sebelum berpindah.", ["Forex, Crypto, Saham, Komoditas", "Tiap market punya karakter berbeda", "Fokus satu market dulu"]],
+      ["Forex", "Forex (Foreign Exchange) adalah pasar pertukaran mata uang antar negara, pasar terbesar dan paling likuid di dunia. Trading forex berpasangan seperti EUR/USD, GBP/USD. Pasar forex buka 24 jam, 5 hari seminggu. Forex cocok untuk pemula karena likuiditas tinggi dan biaya transaksi rendah.", ["Pasar pertukaran mata uang", "Pasangan seperti EUR/USD", "Buka 24 jam, 5 hari"]],
+      ["Crypto", "Crypto adalah mata uang digital berbasis blockchain seperti Bitcoin dan Ethereum. Pasar crypto sangat volatil, buka 24/7, dan cocok untuk trader yang nyaman dengan fluktuasi besar. Risiko crypto lebih tinggi dari forex karena volatilitas dan regulasi yang masih berkembang.", ["Mata uang digital berbasis blockchain", "Sangat volatil, buka 24/7", "Risiko lebih tinggi dari forex"]],
+      ["Saham", "Saham adalah kepemilikan sebagian dari sebuah perusahaan yang diperdagangkan di bursa. Trading saham fokus pada pergerakan harga saham perusahaan. Pasar saham punya jam operasional tetap (sesi bursa) dan dipengaruhi laporan keuangan serta berita perusahaan.", ["Kepemilikan perusahaan di bursa", "Jam operasional sesi bursa", "Dipengaruhi laporan keuangan"]],
+      ["Gold", "Gold (XAU) adalah komoditas logam mulia yang sering diperdagangkan berpasangan dengan USD (XAU/USD). Gold dianggap safe-haven, nilainya naik saat ketidakpastian ekonomi. Trading gold populer karena volatilitas yang baik dan korelasi dengan USD.", ["Komoditas logam mulia", "Pasangan XAU/USD", "Safe-haven saat ketidakpastian"]],
+      ["Istilah Dasar Trading", "Beberapa istilah penting: Buy (long) adalah posisi beli untung saat harga naik, Sell (short) adalah posisi jual untung saat harga turun, Lot adalah ukuran transaksi, Pip adalah satuan pergerakan terkecil, Spread adalah selisih bid & ask, Leverage adalah daya ungkit modal. Pahami istilah ini sebelum mulai trading.", ["Buy/Long & Sell/Short", "Lot, Pip, Spread", "Leverage = daya ungkit"]],
+      ["Risiko Trading", "Trading memiliki risiko kerugian. Tidak ada strategi yang menjamin profit. Risiko utama: kehilangan modal, overtrading, emosi, dan leverage berlebihan. Kelola risiko dengan stop loss, position sizing, dan tidak mempertaruhkan modal yang tidak siap hilang. Trading bukan skema cepat kaya.", ["Tidak ada jaminan profit", "Risiko: kehilangan modal, emosi", "Kelola dengan stop loss & position sizing"]],
+      ["Trading Plan Dasar", "Trading plan adalah aturan tertulis yang memandu keputusan trading: market yang ditrade, strategi entry/exit, aturan risk management, dan jurnal trading. Trading plan membuat trading disiplin dan terukur. Tanpa plan, trading jadi emosional dan tidak konsisten.", ["Aturan tertulis untuk trading", "Isi: market, strategi, risk, jurnal", "Bikin trading disiplin & terukur"]]
+    ],
+    "quiz": [
+      ["Apa tujuan utama trading?", ["Memegang aset selamanya", "Profit dari perubahan harga", "Menyimpan uang di bank", "Mendapatkan dividen"], 1],
+      ["Apa perbedaan utama trading dan investasi?", ["Tidak ada beda", "Trading jangka panjang, investasi pendek", "Trading jangka pendek, investasi panjang", "Investasi lebih berisiko"], 2],
+      ["Apa pasangan paling populer di forex?", ["BTC/USD", "EUR/USD", "XAU/USD", "AAPL/USD"], 1],
+      ["Kapan pasar crypto buka?", ["Hanya jam kerja", "5 hari seminggu", "24/7", "Hanya akhir pekan"], 2],
+      ["Apa itu leverage?", ["Jenis chart", "Daya ungkit modal", "Satuan pergerakan", "Biaya transaksi"], 1]
+    ]
+  },
+  {
+    "title": "Dasar-Dasar Market",
+    "description": "Konsep inti pasar: bid/ask, spread, lot, pip, leverage, margin, dan risk-reward.",
+    "level": "Pemula", "order": 2, "icon": "LineChart",
+    "lessons": [
+      ["Cara Kerja Market", "Market bekerja dengan mencocokkan pembeli dan penjual. Harga bergerak karena interaksi supply dan demand. Saat pembeli dominan harga naik (bullish), saat penjual dominan harga turun (bearish). Broker menjadi perantara antara trader dan pasar.", ["Supply & demand menggerakkan harga", "Bullish = naik, Bearish = turun", "Broker sebagai perantara"]],
+      ["Bid & Ask", "Bid adalah harga tertinggi yang pembeli mau bayar, Ask adalah harga terendah yang penjual mau jual. Anda beli di harga Ask dan jual di harga Bid. Selisih antara Bid dan Ask disebut spread.", ["Bid = harga beli pihak pembeli", "Ask = harga jual pihak penjual", "Beli di Ask, jual di Bid"]],
+      ["Spread", "Spread adalah selisih antara Bid dan Ask, merupakan biaya utama transaksi. Spread bisa fixed atau variable (floating). Pair mayor seperti EUR/USD punya spread kecil, pair exotic spread besar. Spread melebar saat news atau volatilitas tinggi.", ["Selisih Bid & Ask", "Biaya utama transaksi", "Melebar saat volatilitas tinggi"]],
+      ["Lot", "Lot adalah satuan ukuran transaksi. Standard lot = 100.000 unit, mini lot = 10.000 unit, micro lot = 1.000 unit. Pemula disarankan mulai dengan micro lot untuk membatasi risiko. Ukuran lot menentukan nilai per pip.", ["Standard = 100k, Mini = 10k, Micro = 1k", "Pemula mulai micro lot", "Lot tentukan nilai per pip"]],
+      ["Pip", "Pip (Point in Percentage) adalah satuan pergerakan harga terkecil, biasanya digit ke-4 desimal (atau ke-2 untuk pair JPY). Misal EUR/USD naik dari 1.1050 ke 1.1055 = naik 5 pips. Nilai pip tergantung ukuran lot dan pair.", ["Satuan pergerakan terkecil", "Biasanya digit desimal ke-4", "Nilai tergantung lot & pair"]],
+      ["Leverage", "Leverage adalah daya ungkit yang memungkinkan trading dengan modal lebih kecil dari nilai transaksi. Leverage 1:100 berarti modal $1 bisa kontrol $100. Leverage memperbesar profit sekaligus loss, jadi gunakan dengan hati-hati.", ["Daya ungkit modal", "1:100 = $1 kontrol $100", "Perbesar profit & loss"]],
+      ["Margin", "Margin adalah modal yang ditahan broker sebagai jaminan untuk membuka posisi. Margin requirement tergantung leverage. Jika equity turun di bawah margin level tertentu, terjadi margin call atau stop out yang menutup posisi otomatis.", ["Modal jaminan buka posisi", "Tergantung leverage", "Margin call = posisi ditutup otomatis"]],
+      ["Stop Loss", "Stop loss adalah order otomatis menutup posisi pada harga tertentu untuk membatasi kerugian. Stop loss wajib dipasang di setiap trade untuk mengontrol risiko. Letakkan stop loss di level yang masuk akal secara teknikal, bukan asal.", ["Order tutup otomatis batas rugi", "Wajib setiap trade", "Letakkan level teknikal masuk akal"]],
+      ["Take Profit", "Take profit adalah order otomatis menutup posisi saat mencapai target profit. Take profit membantu mengunci profit tanpa harus monitor pasar terus. Kombinasikan take profit dengan stop loss sesuai risk/reward ratio.", ["Order tutup otomatis target profit", "Kunci profit otomatis", "Gabung dengan stop loss"]],
+      ["Risk & Reward", "Risk/Reward (R/R) adalah perbandingan potensi rugi vs potensi profit. R/R 1:2 berarti risiko $1 untuk profit $2. Dengan R/R positif, trader bisa profit meski win rate di bawah 50%. Target minimal R/R 1:2 untuk setiap setup.", ["Perbandingan rugi vs profit", "R/R 1:2 = risiko 1 profit 2", "Target minimal 1:2"]],
+      ["Position Sizing", "Position sizing adalah menentukan ukuran lot berdasarkan risiko per trade. Rumus: lot = (risiko dalam $) / (jarang stop loss dalam pips x nilai per pip). Position sizing menjaga risiko konsisten, biasanya 1-2% modal per trade.", ["Ukuran lot berdasarkan risiko", "Risiko 1-2% modal per trade", "Jaga risiko konsisten"]]
+    ],
+    "quiz": [
+      ["Apa itu spread?", ["Selisih Bid & Ask", "Ukuran lot", "Jenis chart", "Biaya margin"], 0],
+      ["Berapa ukuran standard lot?", ["1.000 unit", "10.000 unit", "100.000 unit", "1.000.000 unit"], 2],
+      ["Apa itu pip?", ["Satuan pergerakan terkecil", "Ukuran transaksi", "Biaya transaksi", "Daya ungkit"], 0],
+      ["Leverage 1:100 artinya?", ["$100 kontrol $1", "$1 kontrol $100", "Profit 100%", "Rugi dibatasi 100"], 1],
+      ["R/R 1:2 berarti?", ["Risiko 2 profit 1", "Risiko 1 profit 2", "Win rate 50%", "Profit pasti 2x"], 1]
+    ]
+  },
+  {
+    "title": "Candlestick & Price Action",
+    "description": "Membaca candlestick, support/resistance, trend, dan dasar price action.",
+    "level": "Menengah", "order": 3, "icon": "CandlestickChart",
+    "lessons": [
+      ["Apa Itu Candlestick", "Candlestick adalah representasi grafis pergerakan harga dalam periode tertentu yang menampilkan harga open, high, low, close. Candlestick memberi informasi visual tentang dinamika pasar lebih kaya dibanding chart garis. Diciptakan oleh pedagang beras Jepang.", ["Tampilkan OHLC per periode", "Lebih informatif dari chart garis", "Asal dari Jepang"]],
+      ["Struktur Candlestick", "Body (badan) adalah selisih open dan close. Wick/shadow adalah bayangan dari high dan low. Candle bullish (close di atas open) biasanya hijau/putih, bearish (close di bawah open) merah/hitam. Panjang body dan wick mengindikasikan kekuatan pergerakan.", ["Body = open-close, Wick = high-low", "Bullish = close di atas open", "Panjang indikasi kekuatan"]],
+      ["Bullish & Bearish Candle", "Bullish candle terbentuk saat close di atas open, menandakan tekanan beli. Bearish candle saat close di bawah open, menandakan tekanan jual. Pola tertentu seperti Doji, Hammer, Engulfing memberi sinyal pembalikan atau kelanjutan.", ["Bullish = tekanan beli", "Bearish = tekanan jual", "Pola: Doji, Hammer, Engulfing"]],
+      ["Support & Resistance", "Support adalah level harga di mana tekanan beli cukup untuk menghentikan penurunan. Resistance adalah level di mana tekanan jual menghentikan kenaikan. Level ini terbentuk dari reaksi harga berulang. Break support/resistance sering jadi sinyal penting.", ["Support = lantai harga", "Resistance = atap harga", "Break = sinyal penting"]],
+      ["Trend", "Trend adalah arah pergerakan harga secara umum. Uptrend = higher high & higher low, downtrend = lower high & lower low, sideways = range. Trading searah trend meningkatkan probabilitas sukses. Trend is your friend.", ["Uptrend, Downtrend, Sideways", "Uptrend = HH & HL", "Trade searah trend"]],
+      ["Breakout", "Breakout adalah pergerakan harga menembus level support/resistance penting. Breakout menandakan mulainya pergerakan kuat. Konfirmasi breakout dengan volume dan close di luar level, hindari false breakout.", ["Tembus support/resistance", "Sinyal pergerakan kuat", "Konfirmasi dengan volume & close"]],
+      ["Pullback", "Pullback adalah koreksi sementara berlawanan arah trend utama. Pullback memberi peluang entry dengan risiko lebih rendah dibanding mengejar breakout. Entry saat pullback ke area support/resistance atau moving average.", ["Koreksi berlawanan trend", "Peluang entry risiko rendah", "Entry di area kunci"]],
+      ["Reversal", "Reversal adalah pembalikan arah trend. Tanda reversal: pola candle (double top/bottom, head & shoulders), divergence indikator, break struktur trend. Konfirmasi reversal sebelum entry untuk hindari false signal.", ["Pembalikan arah trend", "Tanda: pola, divergence, break struktur", "Konfirmasi dulu sebelum entry"]],
+      ["Price Action Dasar", "Price action adalah analisis pergerakan harga mentah tanpa indikator. Fokus pada struktur candle, swing high/low, dan level kunci. Price action mengajarkan membaca perilaku pasar dari price itu sendiri. Banyak trader pro mengandalkan price action.", ["Analisis harga tanpa indikator", "Fokus struktur & level kunci", "Baca perilaku pasar dari price"]]
+    ],
+    "quiz": [
+      ["Apa itu body candlestick?", ["Open-close", "High-low", "Open-high", "Close-low"], 0],
+      ["Support adalah?", ["Level atap harga", "Level lantai harga", "Trend naik", "Pola pembalikan"], 1],
+      ["Uptrend ditandai dengan?", ["Lower high & lower low", "Higher high & higher low", "Harga flat", "Volume rendah"], 1],
+      ["Pullback adalah?", ["Pembalikan trend", "Koreksi sementara", "Break level", "Doji"], 1],
+      ["Price action berfokus pada?", ["Indikator RSI", "Pergerakan harga mentah", "Volume saja", "Berita fundamental"], 1]
+    ]
+  },
+  {
+    "title": "Technical Analysis",
+    "description": "Indikator teknikal: Moving Average, RSI, MACD, Fibonacci, dan kombinasinya.",
+    "level": "Menengah", "order": 4, "icon": "Activity",
+    "lessons": [
+      ["Pengertian Technical Analysis", "Technical analysis adalah metode analisis yang menggunakan data harga dan volume masa lalu untuk memprediksi pergerakan harga. Berbeda dengan fundamental analysis yang melihat nilai intrinsik. TA mengasumsikan harga mendiskontakan semua informasi dan bergerak dalam pola.", ["Analisis pakai data harga & volume", "Prediksi pergerakan harga", "Harga diskonto semua info"]],
+      ["Moving Average", "Moving Average (MA) adalah indikator yang merata-ratakan harga dalam periode tertentu, menghaluskan fluktuasi. MA populer: SMA 50, SMA 200, EMA 20. Golden cross (MA50 di atas MA200) sinyal bullish, death cross sebaliknya. MA juga jadi support/resistance dinamis.", ["Rata-rata harga periode", "SMA & EMA", "Golden/death cross"]],
+      ["RSI", "RSI (Relative Strength Index) adalah oscillator 0-100 yang mengukur kekuatan pergerakan. RSI di atas 70 dianggap overbought, di bawah 30 oversold. Divergence RSI vs harga sering sinyal reversal. RSI cocok untuk konfirmasi, bukan standalone.", ["Oscillator 0-100", "Diatas 70 overbought, dibawah 30 oversold", "Divergence = sinyal reversal"]],
+      ["MACD", "MACD (Moving Average Convergence Divergence) menunjukkan hubungan dua MA. Terdiri dari MACD line, signal line, dan histogram. Cross MACD di atas signal = bullish, di bawah = bearish. Histogram menunjukkan momentum.", ["Hubungan 2 MA", "MACD line & signal line", "Cross = sinyal bullish/bearish"]],
+      ["Volume", "Volume adalah jumlah transaksi dalam periode tertentu. Volume tinggi mengonfirmasi kekuatan suatu pergerakan. Breakout dengan volume tinggi lebih valid. Volume rendah saat sideways menandakan ketertarikan rendah.", ["Jumlah transaksi", "Konfirmasi kekuatan gerakan", "Breakout + volume tinggi = valid"]],
+      ["Trendline", "Trendline adalah garis yang menghubungkan swing high (downtrend) atau swing low (uptrend). Trendline berfungsi sebagai support/resistance dinamis. Break trendline sering jadi sinyal awal perubahan trend. Butuh minimal 2-3 titik kontak.", ["Garis hubung swing", "Support/resistance dinamis", "Break = sinyal ganti trend"]],
+      ["Support & Resistance (TA)", "Dalam TA, support/resistance diidentifikasi dari level harga yang diuji berulang. Semakin sering diuji semakin kuat. Gunakan timeframe lebih tinggi untuk level yang lebih signifikan. Zona support/resistance lebih reliable dari garis tunggal.", ["Level diuji berulang", "Makin sering makin kuat", "TF tinggi lebih signifikan"]],
+      ["Fibonacci", "Fibonacci retracement menggunakan rasio 23.6%, 38.2%, 50%, 61.8%, 78.6% untuk menemukan level pullback potensial. Tarik dari swing low ke swing high (uptrend). Level 61.8% (golden ratio) paling ditunggu. Fibonacci bukan prediksi pasti, tapi area probabilitas.", ["Rasio 38.2%, 50%, 61.8%", "Cari level pullback", "61.8% = golden ratio"]],
+      ["Kombinasi Indikator", "Jangan gunakan terlalu banyak indikator sekaligus (information overload). Kombinasi baik: trend (MA) + momentum (RSI/MACD) + struktur (support/resistance). Konfirmasi sinyal dari beberapa indikator meningkatkan probabilitas. Hindari indikator yang redundan.", ["Hindari terlalu banyak indikator", "Kombinasi: trend + momentum + struktur", "Konfirmasi sinyal naikkan probabilitas"]]
+    ],
+    "quiz": [
+      ["Apa itu moving average?", ["Rata-rata harga periode", "Oscillator", "Pola candle", "Level harga"], 0],
+      ["RSI di atas 70 menandakan?", ["Oversold", "Overbought", "Bullish kuat", "Trend naik"], 1],
+      ["Golden cross adalah?", ["MA50 di atas MA200", "MA50 di bawah MA200", "RSI di atas 70", "Volume tinggi"], 0],
+      ["Level Fibonacci paling ditunggu?", ["23.6%", "38.2%", "61.8%", "78.6%"], 2],
+      ["Breakout valid biasanya disertai?", ["Volume rendah", "Volume tinggi", "RSI oversold", "Doji"], 1]
+    ]
+  },
+  {
+    "title": "Strategi Trading",
+    "description": "Strategi trading: scalping, day trading, swing trading, dan menyusun sistem trading.",
+    "level": "Menengah", "order": 5, "icon": "Target",
+    "lessons": [
+      ["Scalping", "Scalping adalah strategi trading jangka sangat pendek, posisi ditahan beberapa detik hingga menit. Scalper mengambil profit kecil berulang kali. Butuh spread rendah, eksekusi cepat, dan konsentrasi tinggi. Scalping cocok untuk trader aktif dengan waktu luang.", ["Posisi detik-menit", "Profit kecil berulang", "Butuh spread rendah & eksekusi cepat"]],
+      ["Day Trading", "Day trading adalah membuka dan menutup posisi dalam hari yang sama, tidak menginap. Day trader manfaatkan volatilitas intraday. Butuh disiplin waktu dan manajemen risiko ketat. Cocok untuk yang bisa fokus penuh saat sesi trading.", ["Tidak menginap", "Manfaatkan volatilitas intraday", "Butuh disiplin & manajemen risiko"]],
+      ["Swing Trading", "Swing trading menahan posisi beberapa hari hingga minggu untuk menangkap pergerakan besar. Swing trader fokus pada swing high/low dan trend. Tidak butuh monitor terus, cocok untuk yang punya pekerjaan lain. Risiko per trade biasanya lebih besar tapi frekuensi lebih rendah.", ["Tahan beberapa hari-minggu", "Tangkap pergerakan besar", "Cocok untuk sibuk"]],
+      ["Entry", "Entry adalah titik membuka posisi. Entry yang baik di area konfluensi (beberapa level bertemu) meningkatkan probabilitas. Tunggu konfirmasi (breakout, pullback, candle pattern) sebelum entry. Jangan entry berdasarkan FOMO.", ["Titik buka posisi", "Cari konfluensi", "Tunggu konfirmasi"]],
+      ["Stop Loss (Strategi)", "Stop loss diletakkan di level yang membatalkan thesis trading, bukan asal. Bisa di bawah swing low (long) atau atas swing high (short). Gunakan ATR untuk stop dinamis. Jangan memperlebar stop hanya agar tidak kena.", ["Di level batal thesis", "Bawah swing low / atas swing high", "ATR untuk stop dinamis"]],
+      ["Take Profit (Strategi)", "Take profit diletakkan sesuai R/R target dan struktur pasar (resistance berikutnya, level Fibonacci). Sebagian trader partial close di target 1 lalu trailing stop. Sesuaikan take profit dengan volatilitas dan timeframe.", ["Sesuai R/R & struktur", "Partial close + trailing", "Sesuaikan dengan volatilitas"]],
+      ["Risk/Reward (Strategi)", "R/R menentukan profitabilitas jangka panjang. Dengan R/R 1:2, win rate 40% masih untung. Hitung R/R sebelum entry, bukan setelah. Trader konsisten R/R positif bertahan lebih lama dari yang mengejar profit tanpa peduli risiko.", ["R/R 1:2, win 40% tetap untung", "Hitung sebelum entry", "Konsistensi R/R positif"]],
+      ["Setup Trading", "Setup adalah kondisi spesifik yang memicu entry. Setup harus jelas dan terdefinisi: misal pullback ke EMA50 + RSI oversold di uptrend. Setiap setup punya rules entry, stop, target. Trading tanpa setup jelas = gambling.", ["Kondisi spicu entry", "Rules entry/stop/target jelas", "Tanpa setup = gambling"]],
+      ["Backtesting", "Backtesting adalah menguji strategi pada data masa lalu untuk melihat performa. Cek win rate, R/R, drawdown, profit factor. Backtest minimal 100 trades untuk hasil statistik berarti. Backtesting membantu percaya pada sistem saat live.", ["Uji strategi di data lampau", "Cek win rate, drawdown, profit factor", "Min 100 trades"]],
+      ["Membuat Trading Strategy", "Strategi lengkap mencakup: market & timeframe, setup, entry rules, exit rules (stop & target), position sizing, dan rules manajemen. Dokumentasikan dan uji. Strategi tidak perlu rumit, yang penting konsisten dan teruji.", ["Market, setup, entry/exit, sizing", "Dokumentasi & uji", "Sederhana tapi konsisten"]]
+    ],
+    "quiz": [
+      ["Scalping menahan posisi selama?", ["Berhari-hari", "Detik hingga menit", "Berbulan", "Seminggu"], 1],
+      ["Day trading artinya?", ["Menginap posisi", "Tutup posisi di hari sama", "Tahan seminggu", "Tidak pakai stop loss"], 1],
+      ["Entry baik biasanya di?", ["Acak", "Area konfluensi", "Saat FOMO", "Saat harga tertinggi"], 1],
+      ["R/R 1:2 dengan win rate 40%?", ["Rugi", "Untung", "Break even", "Tidak pasti"], 1],
+      ["Backtesting butuh minimal?", ["10 trades", "50 trades", "100 trades", "5 trades"], 2]
+    ]
+  },
+  {
+    "title": "Risk Management",
+    "description": "Mengelola risiko: position sizing, drawdown, dan menghindari overtrading serta revenge trading.",
+    "level": "Lanjutan", "order": 6, "icon": "ShieldCheck",
+    "lessons": [
+      ["Pentingnya Risk Management", "Risk management adalah fondasi trading yang bertahan lama. Trader hebat bukan yang profit terbesar, tapi yang bisa bertahan. Tanpa risk management, satu kerugian besar bisa menghancurkan akun. Profit datang dari konsistensi, bukan satu trade besar.", ["Fondasi trading bertahan", "Bukan profit terbesar tapi konsisten", "Satu rugi besar bisa hancurkan akun"]],
+      ["Risiko per Trade", "Patok risiko maksimal 1-2% modal per trade. Dengan aturan ini, butuh banyak trade berturut untuk menghabiskan akun. Risiko konsisten menjaga emosi stabil dan akun aman. Hitung lot berdasarkan risiko, bukan asal.", ["Maks 1-2% per trade", "Butuh banyak loss untuk habis", "Hitung lot dari risiko"]],
+      ["Position Sizing", "Position sizing menentukan lot dari risiko dan jarak stop. Rumus: lot = (modal x risiko%) / (jarak stop x nilai per pip). Position sizing menyesuaikan ukuran trade dengan volatilitas dan setup, menjaga risiko tetap konsisten.", ["Lot dari risiko & jarak stop", "Sesuaikan dengan volatilitas", "Risiko konsisten"]],
+      ["Stop Loss (Risk Mgmt)", "Stop loss bukan opsional. Setiap trade harus punya stop loss yang ditentukan sebelum entry. Jangan menggeser stop loss lebih jauh saat harga mendekat. Stop loss melindungi modal dari kerugian tak terkendali.", ["Wajib setiap trade", "Tentukan sebelum entry", "Jangan geser menjauh"]],
+      ["Risk/Reward Ratio", "R/R ratio menentukan ekspektasi profitabilitas. Ekspektasi = (win rate x R) - (loss rate x 1). Dengan R/R 1:2 dan win 45%, ekspektasi positif. Target R/R minimal 1:1.5, ideal 1:2 atau lebih.", ["Ekspektasi = win x R - loss x 1", "Target min 1:1.5", "Ideal 1:2 atau lebih"]],
+      ["Maximum Drawdown", "Drawdown adalah penurunan modal dari puncak. Maximum drawdown adalah penurunan terbesar. Drawdown besar sulit dipulihkan (drawdown 50% butuh profit 100% untuk balik). Batasi drawdown dengan risiko kecil per trade.", ["Penurunan dari puncak", "50% butuh 100% untuk balik", "Batasi dengan risiko kecil"]],
+      ["Menghindari Overtrading", "Overtrading adalah trading terlalu sering, sering karena bosong atau emosi. Atur maksimal trade per hari (misal 3). Trading berkualitas lebih baik dari kuantitas. Jika sudah loss beberapa kali, berhenti dan evaluasi.", ["Trading terlalu sering", "Atur maks trade per hari", "Kualitas lebih baik dari kuantitas"]],
+      ["Menghindari Revenge Trading", "Revenge trading adalah trading emosional setelah loss untuk balas dendam. Hampir selalu memperbesar kerugian. Saat emosi meninggi, berhenti trading. Punya aturan: setelah 3 loss beruntun, stop hari itu.", ["Trading emosional setelah loss", "Perbesar kerugian", "Stop setelah 3 loss beruntun"]],
+      ["Mengelola Modal", "Kelola modal seperti bisnis: alokasi risiko, dana cadangan, dan penarikan profit. Jangan reinvestasi seluruh profit. Diversifikasi tidak hanya aset tapi juga strategi. Modal yang terjaga = peluang bertahan dan tumbuh.", ["Kelola seperti bisnis", "Penarikan profit rutin", "Modal terjaga = tumbuh"]]
+    ],
+    "quiz": [
+      ["Risiko maksimal per trade?", ["10%", "1-2%", "50%", "Tidak perlu batas"], 1],
+      ["Drawdown 50% butuh profit berapa untuk balik?", ["50%", "75%", "100%", "25%"], 2],
+      ["Revenge trading adalah?", ["Trading terencana", "Trading emosional setelah loss", "Strategi profit", "Jurnal trading"], 1],
+      ["Overtrading terjadi karena?", ["Disiplin", "Bosong atau emosi", "Analisis baik", "R/R positif"], 1],
+      ["Stop loss sebaiknya?", ["Opsional", "Digeser menjauh", "Ditentukan sebelum entry", "Tidak dipasang"], 2]
+    ]
+  },
+  {
+    "title": "Psychology Trading",
+    "description": "Mentalitas trader: mengendalikan fear, greed, FOMO, dan membangun disiplin.",
+    "level": "Lanjutan", "order": 7, "icon": "Brain",
+    "lessons": [
+      ["Mentalitas Trader", "Mentalitas trader menentukan kesuksesan jangka panjang. Trader sukses disiplin, sabar, realistis, dan menerima risiko. Mereka fokus pada proses, bukan hasil per trade. Mentalitas bisa dilatih dengan jurnal dan evaluasi rutin.", ["Disiplin, sabar, realistis", "Fokus proses bukan hasil", "Dilatih dengan jurnal"]],
+      ["Fear", "Fear (takut) membuat trader ragu entry atau menutup profit terlalu cepat. Fear berlebih berasal dari risiko terlalu besar atau kurang percaya sistem. Atasi dengan risiko kecil dan backtesting yang cukup.", ["Ragu entry, tutup profit cepat", "Dari risiko besar / kurang percaya", "Atasi: risiko kecil + backtest"]],
+      ["Greed", "Greed (serakah) membuat trader overleverage, menahan profit terlalu lama, atau trading terlalu agresif. Greed muncul setelah win streak. Tetap patuh trading plan dan target harian untuk kendalikan greed.", ["Overleverage, menahan profit", "Muncul setelah win streak", "Patuh plan & target harian"]],
+      ["FOMO", "FOMO (Fear of Missing Out) adalah takut ketinggalan pergerakan, sehingga entry terburu-buru di harga buruk. FOMO menyebabkan entry tanpa setup. Tunggu setup berikutnya, pasar selalu ada peluang.", ["Takut ketinggalan gerakan", "Entry tanpa setup", "Tunggu setup berikutnya"]],
+      ["Revenge Trading (Psikologi)", "Revenge trading berasal dari emosi setelah loss: ingin cepat balikkan. Akibatnya abai dari sistem dan risiko. Kenali emosi, berhenti sejenak, kembali saat tenang. Jurnal emosi membantu sadar.", ["Dari emosi setelah loss", "Abai sistem & risiko", "Berhenti, kembali saat tenang"]],
+      ["Overconfidence", "Overconfidence muncul setelah win streak beruntun, merasa tak bisa salah. Akibatnya risiko diperbesar dan abai sistem. Tetap rendah hati: setiap trade berisiko, berpegang pada sistem teruji.", ["Setelah win streak", "Risiko diperbesar", "Tetap patuh sistem"]],
+      ["Disiplin", "Disiplin adalah mengeksekusi trading plan tanpa kompromi. Disiplin memisahkan trader sukses dari yang gagal. Bangun kebiasaan: cek plan sebelum trade, jurnal setiap trade, evaluasi mingguan. Disiplin = kebiasaan.", ["Eksekusi plan tanpa kompromi", "Pembeda sukses vs gagal", "Bangun lewat kebiasaan"]],
+      ["Kesabaran", "Kesabaran adalah menunggu setup berkualitas, bukan memaksa trade. Trader sabar menunggu A+ setup dan melewati setup biasa. Sabar juga dalam menahan posisi sesuai plan. Sabar datang dari percaya pada sistem.", ["Tunggu setup berkualitas", "Lewati setup biasa", "Dari percaya pada sistem"]],
+      ["Trading Journal", "Trading journal mencatat setiap trade: setup, entry, exit, hasil, dan emosi. Journal membantu evaluasi pola dan perbaikan. Review mingguan dan bulanan mengungkap kelemahan. Journal adalah cermin trader.", ["Catat setup, hasil, emosi", "Evaluasi pola & perbaikan", "Review mingguan & bulanan"]]
+    ],
+    "quiz": [
+      ["FOMO menyebabkan?", ["Entry terencana", "Entry tanpa setup", "Profit konsisten", "Disiplin"], 1],
+      ["Revenge trading berasal dari?", ["Kebahagiaan", "Emosi setelah loss", "Backtesting", "Sabar"], 1],
+      ["Overconfidence muncul setelah?", ["Loss beruntun", "Win streak", "Backtest", "Jurnal"], 1],
+      ["Trading journal mencatat?", ["Hanya profit", "Setup, hasil, emosi", "Hanya loss", "Berita saja"], 1],
+      ["Disiplin berarti?", ["Sering trading", "Eksekusi plan tanpa kompromi", "Tidak pakai stop loss", "Mengejar profit"], 1]
+    ]
+  },
+  {
+    "title": "Advanced Trading",
+    "description": "Konsep lanjutan: market structure, liquidity, order block, FVG, dan smart money concepts.",
+    "level": "Lanjutan", "order": 8, "icon": "Rocket",
+    "lessons": [
+      ["Market Structure", "Market structure adalah pola pergerakan harga: higher high/higher low (uptrend), lower high/lower low (downtrend). Break of structure (BOS) dan change of character (CHoCH) menandakan pergeseran. Memahami struktur adalah dasar analisis lanjutan.", ["HH/HL, LH/LL", "BOS & CHoCH", "Dasar analisis lanjutan"]],
+      ["Liquidity", "Liquidity adalah area dengan banyak order stop (stop loss trader lain). Smart money mengambil liquidity di atas swing high / bawah swing low sebelum bergerak arah sebenarnya. Liquidity sweep adalah konsep kunci SMC.", ["Area banyak stop order", "Di atas/bawah swing", "Liquidity sweep = kunci SMC"]],
+      ["Order Block", "Order block adalah candle terakhir sebelum pergerakan kuat yang menyebabkan break of structure. Order block dianggap area institusional entry. Price sering kembali ke order block sebelum lanjut. Bullish OB = candle bearish terakhir sebelum naik.", ["Candle terakhir sebelum BOS", "Area entry institusional", "Price sering balik ke OB"]],
+      ["Fair Value Gap", "Fair Value Gap (FVG) adalah ketidakseimbangan harga, area 3-candle dengan gap di antara candle 1 dan 3. FVG sering menjadi magnet price untuk kembali (rebalance). Trader SMC entry saat price kembali ke FVG.", ["Ketidakseimbangan 3-candle", "Magnet price rebalance", "Entry saat price balik ke FVG"]],
+      ["Smart Money Concepts", "SMC adalah pendekatan trading mengikuti pergerakan institusional (smart money). Konsep: liquidity, order block, FVG, BOS/CHoCH. SMC berasumsi harga bergerak untuk mengambil liquidity. Banyak trader pro mengadopsi SMC.", ["Ikuti institusional", "Liquidity, OB, FVG, BOS", "Harga bergerak cari liquidity"]],
+      ["Multi-Timeframe Analysis", "Multi-timeframe analysis adalah analisis di beberapa timeframe: trend di TF tinggi (H4/D1), entry di TF rendah (M15/M5). Top-down analysis menjaga trade searah trend besar. Hindari konflik antar timeframe.", ["Trend TF tinggi, entry TF rendah", "Top-down analysis", "Trade searah trend besar"]],
+      ["Advanced Price Action", "Price action lanjutan membaca konteks: struktur, liquidity, dan candle di area kunci. Bukan pola tunggal, tapi konfluensi. Entry di area order block/FVG dengan konfirmasi struktur. Konteks lebih penting dari pola tunggal.", ["Baca konteks & konfluensi", "Entry di OB/FVG", "Konteks lebih penting dari pola"]],
+      ["Backtesting Strategy (Advanced)", "Backtesting lanjut: uji di beberapa market dan periode (bull, bear, sideways). Catat statistik lengkap: win rate, profit factor, max drawdown, Sharpe. Optimasi parameter satu per satu. Hindari overfitting.", ["Uji multi-market & periode", "Statistik lengkap", "Hindari overfitting"]],
+      ["Membuat Trading System", "Sistem trading lengkap: aturan entry/exit, manajemen risiko, timeframe, market, dan jurnal. Sistem harus teruji dan terdokumentasi. Sistem yang baik sederhana, dapat dijalankan, dan konsisten.", ["Entry/exit + risk + jurnal", "Teruji & terdokumentasi", "Sederhana & konsisten"]],
+      ["Evaluasi Trading System", "Evaluasi sistem secara berkala: apakah masih relevan dengan kondisi pasar? Cek metrik kunci dan bandingkan dengan ekspektasi. Jika performa menurun, evaluasi penyebab sebelum ubah sistem. Jangan sering ubah sistem.", ["Evaluasi berkala", "Cek metrik vs ekspektasi", "Jangan sering ubah sistem"]]
+    ],
+    "quiz": [
+      ["BOS adalah?", ["Break of Structure", "Buy or Sell", "Best Order System", "Bullish Only Signal"], 0],
+      ["Order block adalah?", ["Candle pertama", "Candle terakhir sebelum BOS", "Pola doji", "Level Fibonacci"], 1],
+      ["FVG adalah?", ["Fair Value Gap", "Fast Volume Growth", "Fixed Value Group", "First Valid Gain"], 0],
+      ["Multi-timeframe analysis?", ["Satu TF saja", "Trend TF tinggi, entry TF rendah", "Hanya TF rendah", "Tanpa TF"], 1],
+      ["SMC fokus pada?", ["Indikator RSI", "Pergerakan institusional", "Volume saja", "Berita"], 1]
+    ]
+  }
+]
