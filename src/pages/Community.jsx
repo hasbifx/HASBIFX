@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useAuth } from "@/lib/AuthContext";
 import { base44 } from "@/api/base44Client";
 import { colorForUser, initials } from "@/lib/learning";
-import { Send, Trash2, Flag, ShieldAlert, MessageCircle, Users } from "lucide-react";
+import { Send, Trash2, Flag, ShieldAlert, MessageCircle, Users, BadgeCheck } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 
 function timeAgo(dateStr) {
@@ -69,6 +69,7 @@ export default function Community() {
         message: text,
         user_name: user?.full_name || user?.email || "Member",
         avatar_color: colorForUser(user?.id),
+        is_admin: isAdmin,
       });
       setMessages((prev) => (prev.some((m) => m.id === created.id) ? prev : [...prev, created]));
       setInput("");
@@ -150,8 +151,9 @@ export default function Community() {
                   {initials(m.user_name)}
                 </div>
                 <div className={`max-w-[75%] ${mine ? "items-end" : ""} flex flex-col`}>
-                  <div className={`flex items-center gap-2 mb-1 ${mine ? "flex-row-reverse" : ""}`}>
+                  <div className={`flex items-center gap-1.5 mb-1 ${mine ? "flex-row-reverse" : ""}`}>
                     <span className="text-xs font-medium">{m.user_name?.split("@")[0] || "Member"}</span>
+                    {m.is_admin && <BadgeCheck className="w-3.5 h-3.5 text-blue-500 shrink-0" />}
                     <span className="text-[10px] text-muted-foreground">{timeAgo(m.created_date)}</span>
                   </div>
                   <div className={`rounded-2xl px-3.5 py-2.5 text-sm ${

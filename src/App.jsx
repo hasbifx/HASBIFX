@@ -29,6 +29,13 @@ import Community from '@/pages/Community';
 import Profile from '@/pages/Profile';
 import Settings from '@/pages/Settings';
 import Admin from '@/pages/Admin';
+import LearningRoadmap from '@/pages/LearningRoadmap';
+import Achievements from '@/pages/Achievements';
+import Certificate from '@/pages/Certificate';
+import TradingJournal from '@/pages/TradingJournal';
+import JournalAnalytics from '@/pages/JournalAnalytics';
+import TradingPractice from '@/pages/TradingPractice';
+import MyBookmarks from '@/pages/MyBookmarks';
 
 const Spinner = () => (
   <div className="fixed inset-0 flex items-center justify-center bg-background">
@@ -64,6 +71,13 @@ const AuthenticatedApp = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/roadmap" element={<LearningRoadmap />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/certificate" element={<Certificate />} />
+          <Route path="/journal" element={<TradingJournal />} />
+          <Route path="/journal-analytics" element={<JournalAnalytics />} />
+          <Route path="/practice" element={<TradingPractice />} />
+          <Route path="/bookmarks" element={<MyBookmarks />} />
         </Route>
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>

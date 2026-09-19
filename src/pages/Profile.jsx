@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "@/lib/AuthContext";
 import { base44 } from "@/api/base44Client";
+import { Link } from "react-router-dom";
 import { loadCurriculum, loadUserProgress, computeOverallProgress, findLastLesson, colorForUser, initials } from "@/lib/learning";
 import {
   Mail, Calendar, BookOpen, Trophy, Award, TrendingUp, Edit3, Check, X, Shield, Star,
@@ -148,7 +149,10 @@ export default function Profile() {
       </div>
 
       {/* Badges */}
-      <h2 className="text-lg font-bold mb-3">Achievement</h2>
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-lg font-bold">Achievement</h2>
+        <Link to="/achievements" className="text-xs text-primary hover:underline">Lihat semua</Link>
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {badges.length > 0 ? badges.map((b, i) => {
           const Icon = b.icon;

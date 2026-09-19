@@ -1,0 +1,93 @@
+{
+  "name": "TradingJournal",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "market": {
+      "type": "string"
+    },
+    "pair": {
+      "type": "string"
+    },
+    "timeframe": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "Buy",
+        "Sell"
+      ],
+      "default": "Buy"
+    },
+    "entry_price": {
+      "type": "number"
+    },
+    "stop_loss": {
+      "type": "number"
+    },
+    "take_profit": {
+      "type": "number"
+    },
+    "exit_price": {
+      "type": "number"
+    },
+    "position_size": {
+      "type": "number"
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "Win",
+        "Loss",
+        "Breakeven"
+      ],
+      "default": "Breakeven"
+    },
+    "profit_loss": {
+      "type": "number",
+      "default": 0
+    },
+    "risk_reward": {
+      "type": "string",
+      "default": ""
+    },
+    "setup": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "emotion": {
+      "type": "string"
+    },
+    "lesson_learned": {
+      "type": "string"
+    },
+    "screenshot_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "pair",
+    "direction"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

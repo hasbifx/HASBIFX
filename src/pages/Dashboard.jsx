@@ -4,7 +4,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { loadCurriculum, loadUserProgress, computeOverallProgress, findNextLesson, findLastLesson, computeClassProgress } from "@/lib/learning";
 import {
   ArrowRight, BookOpen, CheckCircle2, TrendingUp, Trophy,
-  Clock, Sparkles, ChevronRight,
+  Clock, Sparkles, ChevronRight, Map, Award, NotebookPen, CandlestickChart,
 } from "lucide-react";
 
 function StatCard({ icon: Icon, label, value, accent }) {
@@ -136,6 +136,25 @@ export default function Dashboard() {
             <p className="text-muted-foreground text-sm">Anda telah menyelesaikan semua materi. Luar biasa! 🎉</p>
           )}
         </div>
+      </div>
+
+      {/* Trading tools */}
+      <h2 className="text-lg font-bold mt-10 mb-4">Trading Tools</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-2">
+        {[
+          { to: "/journal", icon: NotebookPen, label: "Trading Journal" },
+          { to: "/practice", icon: CandlestickChart, label: "Practice" },
+          { to: "/roadmap", icon: Map, label: "Roadmap" },
+          { to: "/achievements", icon: Award, label: "Achievement" },
+        ].map((q) => {
+          const Icon = q.icon;
+          return (
+            <Link key={q.to} to={q.to} className="rounded-2xl border border-border bg-card p-4 hover:border-primary/40 transition-colors group">
+              <Icon className="w-5 h-5 text-primary mb-2" />
+              <p className="text-sm font-medium group-hover:text-primary transition-colors">{q.label}</p>
+            </Link>
+          );
+        })}
       </div>
 
       {/* Class overview */}

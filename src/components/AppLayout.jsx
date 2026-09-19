@@ -4,17 +4,35 @@ import { useAuth } from "@/lib/AuthContext";
 import {
   Home, BookOpen, TrendingUp, MessageCircle, ClipboardList,
   User, Settings as SettingsIcon, LogOut, Shield, Menu, X, TrendingUp as Logo,
+  Map, Award, Bookmark, NotebookPen, BarChart3, CandlestickChart,
 } from "lucide-react";
 import { initials, colorForUser } from "@/lib/learning";
 
-const NAV_ITEMS = [
-  { to: "/dashboard", label: "Dashboard", icon: Home },
-  { to: "/classes", label: "Kelas", icon: BookOpen },
-  { to: "/progress", label: "Progress", icon: TrendingUp },
-  { to: "/community", label: "Community", icon: MessageCircle },
-  { to: "/quizzes", label: "Quiz", icon: ClipboardList },
-  { to: "/profile", label: "Profile", icon: User },
-  { to: "/settings", label: "Settings", icon: SettingsIcon },
+const NAV_GROUPS = [
+  { items: [
+    { to: "/dashboard", label: "Dashboard", icon: Home },
+  ]},
+  { label: "Belajar", items: [
+    { to: "/roadmap", label: "Roadmap", icon: Map },
+    { to: "/classes", label: "Kelas", icon: BookOpen },
+    { to: "/progress", label: "Progress", icon: TrendingUp },
+    { to: "/quizzes", label: "Quiz", icon: ClipboardList },
+    { to: "/bookmarks", label: "Bookmarks", icon: Bookmark },
+    { to: "/achievements", label: "Achievement", icon: Award },
+    { to: "/certificate", label: "Sertifikat", icon: Award },
+  ]},
+  { label: "Trading Tools", items: [
+    { to: "/journal", label: "Journal", icon: NotebookPen },
+    { to: "/journal-analytics", label: "Analytics", icon: BarChart3 },
+    { to: "/practice", label: "Practice", icon: CandlestickChart },
+  ]},
+  { label: "Komunitas", items: [
+    { to: "/community", label: "Community", icon: MessageCircle },
+  ]},
+  { label: "Akun", items: [
+    { to: "/profile", label: "Profile", icon: User },
+    { to: "/settings", label: "Settings", icon: SettingsIcon },
+  ]},
 ];
 
 function NavList({ onNavigate }) {
@@ -37,26 +55,33 @@ function NavList({ onNavigate }) {
         <span className="text-xl font-bold tracking-tight">HASB<span className="text-primary">IFX</span></span>
       </Link>
 
-      <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-        {NAV_ITEMS.map((item) => {
-          const active = location.pathname === item.to || location.pathname.startsWith(item.to + "/");
-          const Icon = item.icon;
-          return (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={onNavigate}
-              className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                active
-                  ? "bg-primary/15 text-primary border border-primary/30"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
-              }`}
-            >
-              <Icon className="w-[18px] h-[18px] shrink-0" />
-              {item.label}
-            </Link>
-          );
-        })}
+      <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-3">
+        {NAV_GROUPS.map((group, gi) => (
+          <div key={gi}>
+            {group.label && <p className="px-3.5 pt-2 pb-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/60">{group.label}</p>}
+            <div className="space-y-1">
+              {group.items.map((item) => {
+                const active = location.pathname === item.to || location.pathname.startsWith(item.to + "/");
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={onNavigate}
+                    className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                      active
+                        ? "bg-primary/15 text-primary border border-primary/30"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
+                    }`}
+                  >
+                    <Icon className="w-[18px] h-[18px] shrink-0" />
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ))}
         {isAdmin && (
           <Link
             to="/admin"
