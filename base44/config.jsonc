@@ -1,5 +1,5 @@
 {
-  "name": "untitled",
+  "name": "HASBIFX",
   "site": {
     "installCommand": "npm install",
     "buildCommand": "npm run build",
